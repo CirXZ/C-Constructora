@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +12,87 @@
             padding: 80px 0;
             text-align: center;
         }
+
         #inicio {
             background: linear-gradient(rgb(162, 82, 3), rgba(255, 146, 4, 0.416)), url('https://via.placeholder.com/1920x1080') no-repeat center center;
             background-size: cover;
             color: white;
             padding: 150px 0;
         }
+
         #sobre-mi {
             background-color: #f8f9fa;
         }
+
         .card-servicio {
             transition: transform 0.3s ease-in-out;
         }
+
         .card-servicio:hover {
             transform: translateY(-10px);
         }
+
+        .flip-box {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front,
+        .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-box-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .carousel-control-prev,.carousel-control-next {
+            width: 5% !important; /* Ajusta el ancho para que el área de clic sea más grande si quieres */
+            left: 1; /* Mueve el botón de "anterior" al borde izquierdo */
+            right: 0; /* Mueve el botón de "siguiente" al borde derecho */
+        }
+
+        /* Opcional: Para asegurar que no haya un padding extra del carrusel */
+        #carouselExampleFade {
+            padding-left: 0;
+            padding-right: 0;
+        }
     </style>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar-principal" data-bs-offset="56">
 
     <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#inicio">C&C</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,11 +119,63 @@
 
     <header id="inicio" class="seccion d-flex align-items-center text-start">
         <div class="container">
-            <h1 class="display-2 fw-bold mb-3">C&C Constructora</h1>
-            <p class="lead mb-4"> Una constructora familiar</p>
-            <a href="#contacto" class="btn btn-dark btn-lg">¡Contacto!</a>
+
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"
+                        style="background-image: url('https://via.placeholder.com/1920x1080/007bff/ffffff?text=Diapositiva+1');">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h1 class="display-2 fw-bold mb-3">Título Principal de la Página</h1>
+                                    <p class="lead mb-4">1</p>
+                                    <a href="#contacto" class="btn btn-primary btn-lg">¡Contáctame!</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h1 class="display-2 fw-bold mb-3">Título Principal de la Página</h1>
+                                    <p class="lead mb-4">2</p>
+                                    <a href="#contacto" class="btn btn-primary btn-lg">¡Contáctame!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h1 class="display-2 fw-bold mb-3">Título Principal de la Página</h1>
+                                    <p class="lead mb-4">3</p>
+                                    <a href="#contacto" class="btn btn-primary btn-lg">¡Contáctame!</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
         </div>
         
+
     </header>
 
     <section id="sobre-mi" class="seccion">
@@ -80,35 +191,71 @@
             </div>
         </div>
     </section>
+    <!--  -->
+    <!-- card card-servicio shadow-sm h-100 -->
+    <!-- card-body  -->
 
     <section id="servicios" class="seccion">
         <div class="container">
             <h2 class="mb-5">Servicios</h2>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card card-servicio shadow-sm h-100">
-                        <div class="card-body">
-                            <i class="bi bi-code-slash fs-1 text-primary"></i> <h5 class="card-title mt-3">Desarrollo Web</h5>
-                            <p class="card-text">Creación de sitios web modernos y funcionales.</p>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <i class="bi bi-code-slash fs-1 text-primary"></i>
+                            </div>
+                            <div class="flip-box-back">
+                                <H2>FKSAJHFSAF</H2>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-servicio shadow-sm h-100">
-                        <div class="card-body">
-                            <i class="bi bi-brush fs-1 text-primary"></i> <h5 class="card-title mt-3">Diseño Gráfico</h5>
-                            <p class="card-text">Diseño de logos, folletos y material publicitario.</p>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <i class="bi bi-brush fs-1 text-primary"></i>
+                                <h5 class="card-title mt-3"></h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="flip-box-back">
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-servicio shadow-sm h-100">
-                        <div class="card-body">
-                            <i class="bi bi-megaphone fs-1 text-primary"></i> <h5 class="card-title mt-3">Marketing Digital</h5>
-                            <p class="card-text">Estrategias para posicionar tu marca en línea.</p>
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <i class="bi bi-megaphone fs-1 text-primary"></i>
+                                <h5 class="card-title mt-3"></h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="flip-box-back">
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <i class="bi bi-brush fs-1 text-primary"></i>
+                                <h5 class="card-title mt-3"></h5>
+                                <p class="card-text"></p>
+                            </div>
+                            <div class="flip-box-back">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -177,11 +324,15 @@
         <div class="container">
             <p class="mb-0">&copy; 2025 Mi Marca. Todos los derechos reservados.</p>
             <div class="mt-2">
-                <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a> <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a> <a href="#" class="text-white"><i class="bi bi-twitter"></i></a> </div>
+                <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a> <a href="#"
+                    class="text-white me-3"><i class="bi bi-instagram"></i></a> <a href="#" class="text-white"><i
+                        class="bi bi-twitter"></i></a>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>
+
 </html>
