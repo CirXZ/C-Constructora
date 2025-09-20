@@ -14,7 +14,7 @@
         }
 
         #inicio {
-            background: linear-gradient(rgb(162, 82, 3), rgba(255, 146, 4, 0.416)), url('https://via.placeholder.com/1920x1080') no-repeat center center;
+            background-image:url(img/Imagen\ de\ WhatsApp\ 2025-09-05\ a\ las\ 20.09.52_6af919e2.jpg);
             background-size: cover;
             color: white;
             padding: 150px 0;
@@ -23,7 +23,7 @@
         #sobre-mi {
             background-color: #f8f9fa;
         }
-
+        nav
         .card-servicio {
             transition: transform 0.3s ease-in-out;
         }
@@ -31,12 +31,16 @@
         .card-servicio:hover {
             transform: translateY(-10px);
         }
-
+        .navbar-hidden{
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
         .flip-box {
             background-color: transparent;
+            border-radius: 10%;
             width: 300px;
             height: 200px;
-            border: 1px solid #f1f1f1;
+            /* border: 1px solid #f1f1f1; */
             perspective: 1000px;
         }
 
@@ -60,37 +64,61 @@
             height: 100%;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .flip-box-front {
-            background-color: #bbb;
+            background-color: #ffff;
+            border-radius: 10%;
             color: black;
         }
 
         .flip-box-back {
-            background-color: dodgerblue;
+            background-color: #ffff;
+            border-radius: 10%;
             color: white;
             transform: rotateY(180deg);
         }
-        .carousel-control-prev,.carousel-control-next {
-            width: 5% !important; /* Ajusta el ancho para que el área de clic sea más grande si quieres */
-            left: 1; /* Mueve el botón de "anterior" al borde izquierdo */
-            right: 0; /* Mueve el botón de "siguiente" al borde derecho */
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5% !important;
+            left: 1;
+            right: 0;
         }
 
-        /* Opcional: Para asegurar que no haya un padding extra del carrusel */
+
         #carouselExampleFade {
             padding-left: 0;
             padding-right: 0;
+        }
+        canvas{
+
+            background-size: cover;
+            background-position: center;
+        }
+        footer {
+            position: relative !important;
+            height: 87vh !important;
+            background-color: #FFD700 !important;
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed !important;
+            overflow: hidden !important;
+        }
+        .fuente{
+            font-size: 2.4rem;
         }
     </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-principal" data-bs-offset="56">
 
-    <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav id="navbar-principal " class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#inicio">C&C</a>
+            <a class="navbar-brand" href="#inicio"><img src="img/Logo.png" alt=""  width="30" height="24" class="d-inline-block align-text-top img-fluid rounded-circle"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -118,18 +146,19 @@
     </nav>
 
     <header id="inicio" class="seccion d-flex align-items-center text-start">
-        <div class="container">
+        
+        <div id="inicio" class="container ">
 
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
-                    <div class="carousel-item active"
-                        style="background-image: url('https://via.placeholder.com/1920x1080/007bff/ffffff?text=Diapositiva+1');">
-                        <div class="container">
+                    <div class="carousel-item active" >
+                        <div class="container"> 
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h1 class="display-2 fw-bold mb-3">Título Principal de la Página</h1>
+                                    <h1 class="display-2 fw-bold mb-3">C&Constructora</h1>
                                     <p class="lead mb-4">1</p>
-                                    <a href="#contacto" class="btn btn-primary btn-lg">¡Contáctame!</a>
+                                    <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
+                                    <!-- <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg" alt="" style="background-size: cover;"> -->
                                 </div>
 
                             </div>
@@ -139,9 +168,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h1 class="display-2 fw-bold mb-3">Título Principal de la Página</h1>
+                                    <h1 class="display-2 fw-bold mb-3">C&Constructora</h1>
                                     <p class="lead mb-4">2</p>
-                                    <a href="#contacto" class="btn btn-primary btn-lg">¡Contáctame!</a>
+                                    <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
                                 </div>
                             </div>
                         </div>
@@ -150,9 +179,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h1 class="display-2 fw-bold mb-3">Título Principal de la Página</h1>
+                                    <h1 class="display-2 fw-bold mb-3">C&Constructora</h1>
                                     <p class="lead mb-4">3</p>
-                                    <a href="#contacto" class="btn btn-primary btn-lg">¡Contáctame!</a>
+                                    <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +190,7 @@
                 </div>
             </div>
 
-            
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -172,28 +201,35 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            
+
         </div>
-        
+
 
     </header>
+    
 
     <section id="sobre-mi" class="seccion">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="https://via.placeholder.com/500" class="img-fluid rounded-circle shadow-sm" alt="Mi Foto">
+                    <img src="img/Logo.png" class="img-fluid rounded" alt="Mi Foto">
                 </div>
                 <div class="col-md-6 text-md-start">
-                    <h2 class="mb-4">Sobre C&C</h2>
-                    <p>"Descripcion empresa"</p>
+                    <h2 class="mb-4"> C&constructora</h2>
+                    <p>En C&constructora, convertimos tus ideas en espacios funcionales, modernos y de alta calidad.
+                        Somos una empresa constructora especialida en:
+                        <li>Remodelaciones integrales</li>
+                        <li>Diseño arquitectonico</li>
+                        <li>Habilitación de espacios comerciales <br> y residenciales</li>
+                        <li>Revestimiento profesional de pisos</li>
+                    </p>
+                    <p>Con cobertura en la <b>Region Metropolitana y Valparaiso</b>, nuestro equipo trabaja con 
+                        <br>profesionalismo, compromiso y atencion al detalle en cada etapadel proyecto.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!--  -->
-    <!-- card card-servicio shadow-sm h-100 -->
-    <!-- card-body  -->
+   
 
     <section id="servicios" class="seccion">
         <div class="container">
@@ -204,9 +240,10 @@
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
                                 <i class="bi bi-code-slash fs-1 text-primary"></i>
+                                <h5 class="card-title mt-3">Arquitectura y diseño</h5>
                             </div>
                             <div class="flip-box-back">
-                                <H2>FKSAJHFSAF</H2>
+                                <H2></H2>
                             </div>
                         </div>
                     </div>
@@ -217,8 +254,7 @@
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
                                 <i class="bi bi-brush fs-1 text-primary"></i>
-                                <h5 class="card-title mt-3"></h5>
-                                <p class="card-text"></p>
+                                <h5 class="card-title mt-3"> Construcción y habilitación</h5>
                             </div>
                             <div class="flip-box-back">
 
@@ -231,8 +267,7 @@
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
                                 <i class="bi bi-megaphone fs-1 text-primary"></i>
-                                <h5 class="card-title mt-3"></h5>
-                                <p class="card-text"></p>
+                                <h5 class="card-title mt-3">Revestimiento de piso</h5>
                             </div>
                             <div class="flip-box-back">
 
@@ -246,8 +281,7 @@
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
                                 <i class="bi bi-brush fs-1 text-primary"></i>
-                                <h5 class="card-title mt-3"></h5>
-                                <p class="card-text"></p>
+                                <h5 class="card-title mt-3">Estructuras Metálicas</h5>
                             </div>
                             <div class="flip-box-back">
 
@@ -260,46 +294,87 @@
         </div>
     </section>
 
-    <section id="portafolio" class="seccion bg-light">
+    <section id="portafolio" class="seccion bg-black">
+
+        <style>
+
+            .carousel-item,
+            .carousel-inner {
+                height: 100%;
+            }
+
+            .seccion img {
+                
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            
+        </style>
         <div class="container">
-            <h2 class="mb-5">Mi Portafolio</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card shadow-sm h-100">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Proyecto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 1</h5>
-                            <p class="card-text">Breve descripción del proyecto y tecnologías usadas.</p>
+            <h1 class="mb-5 text-start text-white" style="--bs-text-opacity: .7;">Proyectos</h1>
+            <div class="row d-md-flex align-items-center ">
+                <div class="col-md-4 d-flex " >
+                    <div id="carouselExample " class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.52_6af919e2.jpg"
+                                    class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.52_dd616cf7.jpg"
+                                    class="img-fluid rounded"  alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.52_9062d38e.jpg"
+                                    class="img-fluid rounded"  alt="">
+                            </div>
                         </div>
                     </div>
+
+                </div>
+                <!-- <div class="col-md-4 d-flex flex-column gap-4 ">
+                    <img src="img/IMG-20250914-WA0009.jpg" class="img-fluid rounded" alt="">
+                    
+                </div> -->
+                <div class="col-md-4 d-flex flex-column gap-4 ">
+
+                    <img src="img/IMG-20250914-WA0016.jpg" alt="">
+                    
+                    <!-- <canvas id="myCanvas" width="200" height="150" style="border:1px solid #ffffff;"></canvas>
+                    <canvas id="nuevocanvas" width="738" height="1600" style="border:1px solid #ffffff;"></canvas> -->
                 </div>
                 <div class="col-md-4">
-                    <div class="card shadow-sm h-100">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Proyecto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 2</h5>
-                            <p class="card-text">Breve descripción del proyecto y tecnologías usadas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm h-100">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Proyecto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 3</h5>
-                            <p class="card-text">Breve descripción del proyecto y tecnologías usadas.</p>
-                        </div>
-                    </div>
+                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.51_b4226a75.jpg" alt="">
                 </div>
             </div>
+            <div class="row g-4 d-flex align-items-start mt-5 ">
+                <div class="col-md-4 d-flex flex-column gap-4">
+                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg" class="img-fluid rounded"
+                        alt="">
+                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg" class="img-fluid rounded"
+                        alt="">
+                </div>
+                <div class="col-md-4 d-flex offset-md-4">
+                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_c0c35a87.jpg" class="img-fluid rounded"
+                        alt="">
+                </div>
+
+            </div>
         </div>
+
+
     </section>
 
-    <section id="contacto" class="seccion">
-        <div class="container">
+
+
+    <footer class=" text-black py-4">
+
+        <div class="container text-center">
             <h2 class="mb-5">Contáctame</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
+            <div class="row d-flex flex-row-reverse">
+                <div class="col-md-4">
                     <form>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -316,21 +391,29 @@
                         <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
                     </form>
                 </div>
+
+                <div class="col-md-8 fuente justify-content-center">
+                    <p class="mb-5">correo empresasssss</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-white me-5"><i class="bi bi-linkedin"></i></a> 
+                        <a href="#" class="text-white me-5"><i class="bi bi-instagram"></i></a> 
+                        <a href="#" class="text-white me-5"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex aligns-items-center">
+                <div class="col justify-content-center">
+                    <p class="mb-0">&copy; Desarrollado por CristopherRomán</p>
+                </div>
             </div>
         </div>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-4">
+        
         <div class="container">
-            <p class="mb-0">&copy; 2025 Mi Marca. Todos los derechos reservados.</p>
-            <div class="mt-2">
-                <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a> <a href="#"
-                    class="text-white me-3"><i class="bi bi-instagram"></i></a> <a href="#" class="text-white"><i
-                        class="bi bi-twitter"></i></a>
-            </div>
+            
+            
         </div>
     </footer>
-
+    <script src="Funciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>
