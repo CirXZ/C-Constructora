@@ -6,119 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C&C Constructora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Estilos personalizados para las secciones */
-        .seccion {
-            padding: 80px 0;
-            text-align: center;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
 
-        #inicio {
-            background-image:url(img/Imagen\ de\ WhatsApp\ 2025-09-05\ a\ las\ 20.09.52_6af919e2.jpg);
-            background-size: cover;
-            color: white;
-            padding: 150px 0;
-        }
-
-        #sobre-mi {
-            background-color: #f8f9fa;
-        }
-        nav
-        .card-servicio {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card-servicio:hover {
-            transform: translateY(-10px);
-        }
-        .navbar-hidden{
-            transform: translateY(-100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        .flip-box {
-            background-color: transparent;
-            border-radius: 10%;
-            width: 300px;
-            height: 200px;
-            /* border: 1px solid #f1f1f1; */
-            perspective: 1000px;
-        }
-
-        .flip-box-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-box:hover .flip-box-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-box-front,
-        .flip-box-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .flip-box-front {
-            background-color: #ffff;
-            border-radius: 10%;
-            color: black;
-        }
-
-        .flip-box-back {
-            background-color: #ffff;
-            border-radius: 10%;
-            color: white;
-            transform: rotateY(180deg);
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 5% !important;
-            left: 1;
-            right: 0;
-        }
-
-
-        #carouselExampleFade {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        canvas{
-
-            background-size: cover;
-            background-position: center;
-        }
-        footer {
-            position: relative !important;
-            height: 87vh !important;
-            background-color: #FFD700 !important;
-            background-size: cover; 
-            background-position: center;
-            background-attachment: fixed !important;
-            overflow: hidden !important;
-        }
-        .fuente{
-            font-size: 2.4rem;
-        }
-    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-principal" data-bs-offset="56">
 
     <nav id="navbar-principal " class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#inicio"><img src="img/Logo.png" alt=""  width="30" height="24" class="d-inline-block align-text-top img-fluid rounded-circle"></a>
+            <a class="navbar-brand" href="#inicio"><img src="img/Logo.png" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top img-fluid rounded-circle"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -129,7 +27,7 @@
                         <a class="nav-link" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+                        <a class="nav-link" href="#empresa">Empresa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#servicios">Servicios</a>
@@ -146,100 +44,58 @@
     </nav>
 
     <header id="inicio" class="seccion d-flex align-items-center text-start">
-        
-        <div id="inicio" class="container ">
 
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" >
-                        <div class="container"> 
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <h1 class="display-2 fw-bold mb-3">C&Constructora</h1>
-                                    <p class="lead mb-4">1</p>
-                                    <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
-                                    <!-- <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg" alt="" style="background-size: cover;"> -->
-                                </div>
+        <div class="background-slideshow">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <h1 class="display-2 fw-bold mb-3">C&Constructora</h1>
-                                    <p class="lead mb-4">2</p>
-                                    <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <h1 class="display-2 fw-bold mb-3">C&Constructora</h1>
-                                    <p class="lead mb-4">3</p>
-                                    <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-
+        <div class="container" style="position: relative; z-index: 1;">
+            <h1 class="display-2 fw-bold mb-3 texto-enc">C&Constructora</h1>
+            <p class="lead mb-4 texto-enc">En C&Constructora nos centramos en la mejora continua de nuestro</p>
+            <a href="#contacto" class="btn btn-primary btn-lg">Contacto</a>
         </div>
 
 
     </header>
-    
 
-    <section id="sobre-mi" class="seccion">
+
+    <section id="empresa" class="seccion">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <img src="img/Logo.png" class="img-fluid rounded" alt="Mi Foto">
                 </div>
                 <div class="col-md-6 text-md-start">
-                    <h2 class="mb-4"> C&constructora</h2>
-                    <p>En C&constructora, convertimos tus ideas en espacios funcionales, modernos y de alta calidad.
+                    <h2 class="mb-4 estilo-fuente" style="font-weight: bold;"> C&constructora</h2>
+                    <p class="estilo-fuente">En C&constructora, convertimos tus ideas en espacios funcionales, modernos
+                        y de alta calidad.
                         Somos una empresa constructora especialida en:
-                        <li>Remodelaciones integrales</li>
-                        <li>Diseño arquitectonico</li>
-                        <li>Habilitación de espacios comerciales <br> y residenciales</li>
-                        <li>Revestimiento profesional de pisos</li>
+                        <li class="estilo-fuente">Remodelaciones integrales</li>
+                        <li class="estilo-fuente">Diseño arquitectonico</li>
+                        <li class="estilo-fuente">Habilitación de espacios comerciales <br> y residenciales</li>
+                        <li class="estilo-fuente">Revestimiento profesional de pisos</li>
                     </p>
-                    <p>Con cobertura en la <b>Region Metropolitana y Valparaiso</b>, nuestro equipo trabaja con 
-                        <br>profesionalismo, compromiso y atencion al detalle en cada etapadel proyecto.</p>
+                    <p class="estilo-fuente">Con cobertura en la <b>Region Metropolitana y Valparaiso</b>, nuestro
+                        equipo trabaja con
+                        <br>profesionalismo, compromiso y atencion al detalle en cada etapadel proyecto.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-   
+
 
     <section id="servicios" class="seccion">
         <div class="container">
-            <h2 class="mb-5">Servicios</h2>
+            <h2 class="mb-5 estilo-fuente" style="font-weight: bold;">Servicios</h2>
             <div class="row g-4">
                 <div class="col-md-3 d-flex justify-content-center">
                     <div class="flip-box">
                         <div class="flip-box-inner">
-                            <div class="flip-box-front">
-                                <i class="bi bi-code-slash fs-1 text-primary"></i>
+                            <div class="flip-box-front ">
+                                <img src="icons/design-studio-svgrepo-com.svg" style="width: 40px;height: 40px;" alt="">
                                 <h5 class="card-title mt-3">Arquitectura y diseño</h5>
                             </div>
                             <div class="flip-box-back">
@@ -253,7 +109,7 @@
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                                <i class="bi bi-brush fs-1 text-primary"></i>
+                                <img src="icons/helmet-svgrepo-com.svg" style="width: 40px;height: 40px;" alt="">
                                 <h5 class="card-title mt-3"> Construcción y habilitación</h5>
                             </div>
                             <div class="flip-box-back">
@@ -266,7 +122,7 @@
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                                <i class="bi bi-megaphone fs-1 text-primary"></i>
+                                <img src="icons/revestimiento_de_piso.svg" style="width: 40px;height: 40px;" alt="">
                                 <h5 class="card-title mt-3">Revestimiento de piso</h5>
                             </div>
                             <div class="flip-box-back">
@@ -280,7 +136,7 @@
                     <div class="flip-box">
                         <div class="flip-box-inner">
                             <div class="flip-box-front">
-                                <i class="bi bi-brush fs-1 text-primary"></i>
+                                <img src="icons/crane-svgrepo-com.svg" style="width: 40px;height: 40px;" alt="">
                                 <h5 class="card-title mt-3">Estructuras Metálicas</h5>
                             </div>
                             <div class="flip-box-back">
@@ -291,44 +147,60 @@
                 </div>
 
             </div>
+            <div class="row g-4 d-flex align-items-center justify-content-center">
+                <div class="col-md-3 d-flex align-items-center justify-content-center">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front text-center">
+                                <img src="icons/basketball-court-svgrepo-com.svg" style="width: 40px;height: 40px;" alt="">
+                                <h5 class="card-title mt-3">Construccion de canchas deportivas</h5>
+                            </div>
+                            <div class="flip-box-back">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section id="portafolio" class="seccion bg-black">
 
         <style>
-
             .carousel-item,
             .carousel-inner {
                 height: 100%;
             }
 
             .seccion img {
-                
+
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
             }
-            
         </style>
         <div class="container">
             <h1 class="mb-5 text-start text-white" style="--bs-text-opacity: .7;">Proyectos</h1>
+
             <div class="row d-md-flex align-items-center ">
-                <div class="col-md-4 d-flex " >
-                    <div id="carouselExample " class="carousel slide " data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="col-md-4 d-flex ">
+                    <div id="carouselExample" class="carousel slide shadow-effect" data-bs-ride="carousel"
+                        data-bs-interval="3000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.52_6af919e2.jpg"
-                                    class="img-fluid rounded" alt="">
+                                    class="img-fluid rounded" alt="" width="1000px">
                             </div>
                             <div class="carousel-item">
                                 <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.52_dd616cf7.jpg"
-                                    class="img-fluid rounded"  alt="">
+                                    class="img-fluid rounded" alt="">
                             </div>
                             <div class="carousel-item">
                                 <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.52_9062d38e.jpg"
-                                    class="img-fluid rounded"  alt="">
+                                    class="img-fluid rounded" alt="">
                             </div>
                         </div>
                     </div>
@@ -340,29 +212,140 @@
                 </div> -->
                 <div class="col-md-4 d-flex flex-column gap-4 ">
 
-                    <img src="img/IMG-20250914-WA0016.jpg" alt="">
-                    
-                    <!-- <canvas id="myCanvas" width="200" height="150" style="border:1px solid #ffffff;"></canvas>
-                    <canvas id="nuevocanvas" width="738" height="1600" style="border:1px solid #ffffff;"></canvas> -->
-                </div>
-                <div class="col-md-4">
-                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.51_b4226a75.jpg" alt="">
-                </div>
-            </div>
-            <div class="row g-4 d-flex align-items-start mt-5 ">
-                <div class="col-md-4 d-flex flex-column gap-4">
-                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg" class="img-fluid rounded"
-                        alt="">
-                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg" class="img-fluid rounded"
-                        alt="">
-                </div>
-                <div class="col-md-4 d-flex offset-md-4">
-                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_c0c35a87.jpg" class="img-fluid rounded"
-                        alt="">
-                </div>
+                    <div id="carouselExample" class="carousel slide shadow-effect card-servicio" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/IMG-20250914-WA0007.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/IMG-20250914-WA0008.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/IMG-20250914-WA0009.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/IMG-20250914-WA0010.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/IMG-20250914-WA0011.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/IMG-20250914-WA0012.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                        </div>
 
-            </div>
-        </div>
+                    </div>
+                    <div class="d-flex text-center justify-content-center align-items-center ">
+                        <div id="NuevoTamaño" class="shadow-effect">
+                            <p class="mb-5 text-start text-dark text-center">Diseños y construcciones especializadas</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex">
+                    <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.09.51_b4226a75.jpg" class="img-fluid rounded"
+                        alt="">
+                </div>
+                <div class="row g-4 d-flex align-items-center mt-5 ">
+
+                    <div class="col-md-8 d-flex flex-column gap-4">
+                        <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_fdc2c335.jpg"
+                            class="img-fluid rounded shadow-effect card-servicio" alt="">
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <img src="img/Imagen de WhatsApp 2025-09-05 a las 20.07.02_c0c35a87.jpg"
+                            class="img-fluid rounded card-servicio" alt="">
+                    </div>
+
+
+                </div>
+                <div class="row g-4 d-flex align-items-center mt-5">
+
+                    <div class="col-md-4 d-flex flex-column gap-4">
+                        <img src="img/IMG-20250914-WA0013.jpg" class="img-fluid rounded card-servicio" alt="">
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column gap-4">
+                        <img src="img/IMG-20250914-WA0014.jpg" class="img-fluid rounded card-servicio" alt="">
+                    </div>
+
+                    <!-- <div class="col-md-4 d-flex text-center justify-content-center align-items-center ">
+                        <div id="NuevoTamaño" class="shadow-effect">
+                            <p class="mb-5 text-dark text-center"><span class="text-warning">Expertos</span><br>en todas
+                                las areas</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="row g-4 d-flex align-items-center mt-5">
+                    <div class="col-md-4 d-flex flex-column gap-4">
+                        <img src="img/IMG-20250914-WA0019.jpg" class="img-fluid rounded card-servicio" alt="">
+                    </div>
+                    <div class="col-md-4 d-flex flex-Row gap-4">
+                        <div id="carouselExample" class="carousel slide shadow-effect card-servicio"
+                            data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/IMG-20250914-WA0016.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/IMG-20250914-WA0017.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 d-flex flex-row gap-4">
+                        <img src="img/IMG-20250914-WA0018.jpg" class="img-fluid rounded card-servicio" alt="">
+                    </div>
+                    <div id="NuevoTamaño" class="shadow-effect">
+                        <p class="mb-5 text-dark text-center">Mejora<span class="text-white"> continua en cada </span>
+                            <span class="text-warning">detalle</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4 d-flex align-items-center mt-5">
+                    <div class="col-md-6 d-flex flex-row gap-4">
+                        <img src="img/IMG-20250914-WA0023.jpg" class="img-fluid rounded card-servicio" alt="">
+
+                    </div>
+                    <div class="col-md-3 d-flex flex-column gap-4">
+                        <div id="carouselExample" class="carousel slide shadow-effect card-servicio"
+                            data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/IMG-20250914-WA0022.jpg" class="img-fluid rounded" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/IMG-20250914-WA0020.jpg" class="img-fluid rounded" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex flex-row gap-4">
+                        <img src="img/IMG-20250914-WA0021.jpg" class="img-fluid rounded card-servicio" alt="">
+                    </div>
+                    <div class="col-md-6 d-flex flex-row gap-4">
+                        <img src="img/IMG-20250914-WA0024.jpg" class="img-fluid rounded card-servicio" alt="">
+
+                    </div>
+                    <div class="col-md-6 d-flex flex-column gap-4">
+                        <img src="img/IMG-20250914-WA0025.jpg" class="img-fluid rounded card-servicio" alt="">
+
+                    </div>
+
+                </div>
+                <div class="row g-4 d-flex align-items-center justify-content-center mt-5">
+                    <div id="NuevoTamaño" class="shadow-effect">
+                        <p class="mb-5 text-dark text-center">Con<span class="text-danger"> sello </span>
+                            <span class="text-white">y garantia</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column gap-4 align-items-center justify-content-center">
+                        <img src="img/Sello3.jpg" class="img-fluid rounded shadow-effect" alt="">
+                    </div>
+                </div>
 
 
     </section>
@@ -371,8 +354,8 @@
 
     <footer class=" text-black py-4">
 
-        <div class="container text-center">
-            <h2 class="mb-5">Contáctame</h2>
+        <div id="contacto" class="container text-center">
+            <h2 class="mb-5 letras text-white">Contacto</h2>
             <div class="row d-flex flex-row-reverse">
                 <div class="col-md-4">
                     <form>
@@ -392,25 +375,20 @@
                     </form>
                 </div>
 
-                <div class="col-md-8 fuente justify-content-center">
-                    <p class="mb-5">correo empresasssss</p>
-                    <div class="mt-2">
-                        <a href="#" class="text-white me-5"><i class="bi bi-linkedin"></i></a> 
-                        <a href="#" class="text-white me-5"><i class="bi bi-instagram"></i></a> 
-                        <a href="#" class="text-white me-5"><i class="bi bi-facebook"></i></a>
+                <div class="col-md-8 fuente justify-content-start">
+                    <p class="mb-5 letras ">correos </p>
+                    <div class="mt-2 align-items-start">
+                        <a href="https://www.facebook.com/people/CC-Construcci%C3%B3n/61578551427943/"
+                            class="text-white text-start me-5"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="row d-flex aligns-items-center">
-                <div class="col justify-content-center">
-                    <p class="mb-0">&copy; Desarrollado por CristopherRomán</p>
-                </div>
-            </div>
+
         </div>
-        
+
         <div class="container">
-            
-            
+
+
         </div>
     </footer>
     <script src="Funciones.js"></script>
