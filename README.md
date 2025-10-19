@@ -8,7 +8,7 @@ La pagina como tal, solo es un portafolio, una pagina *one page*, que muestra lo
 por la empresa.
 
 ***
-![Diseño_Sello_Empresa](img/Sello3.jpg"Sello")
+![Diseño_Sello_Empresa](img/Sello3.jpg "Sello")
 
 ***
 Desarrollado por Cristopher Roman
