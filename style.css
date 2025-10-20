@@ -84,10 +84,14 @@
         }
 
         .navbar-hidden {
+            
             transform: translateY(-100%);
+            
+        }
+        #navbar-principal {
             transition: transform 0.3s ease-in-out;
         }
-
+        
         .flip-box {
             background-color: transparent;
             border-radius: 10%;
