@@ -138,7 +138,7 @@
         .flip-box-back {
             background-color: #ffff;
             border-radius: 10%;
-            color: white;
+            color: black;
             transform: rotateY(180deg);
         }
 
@@ -195,6 +195,6 @@
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
 
-        .inclinacion {
+        ul {
             
         }
