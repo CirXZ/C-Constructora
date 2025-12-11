@@ -191,10 +191,25 @@
         }
         .letras {
             font-size: 48px;
-            
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
 
         ul {
             
+        }
+        label {display: block;}
+        input[type="text"], input[type="email"], textarea {
+            border: none;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+            width: 100%;
+            background: transparent;
+        }
+        
+        .formulario {
+            border: none;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+            width: 100%;
+            background: transparent;
+            /* padding: rem; */
         }
